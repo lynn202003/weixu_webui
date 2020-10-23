@@ -1,0 +1,22 @@
+-
+  id: test_rolelist001.1
+  detail : 输入正确的内容正常创建角色
+  screenshot : creat_role_sucess
+  data :
+    rolename : 我是角色名称
+    roledesc : 我是角色说明
+    check_permissions : 选择权限
+  check :
+     - 我是角色名称
+     - 我是角色说明
+-
+  id: test_rolelist001.2
+  detail : 输入正确的内容正常编辑角色
+  screenshot : edit_role_sucess
+  data :
+    rolename : 修改角色名称
+    roledesc : 修改角色说明
+    check_permissions : 选择权限
+  check :
+     - 修改角色名称
+     - 修改角色说明

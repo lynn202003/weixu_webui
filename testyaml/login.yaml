@@ -1,0 +1,49 @@
+
+
+testinfo:
+      - id: test_login001
+        title: 登录测试
+        info: 微续运营后台
+testcase:
+      - element_info: input[type='text']
+        find_type: css
+        operate_type: send_keys
+        info: 输入帐号
+      - element_info: input[type='password']
+        find_type: css
+        operate_type: send_keys
+        info: 输入密码
+      - element_info: span[class='el-checkbox__inner']
+        find_type: css
+        operate_type: click
+        info: 点击自动登录单选框
+      - element_info: button[type='button']
+        find_type: css
+        operate_type: click
+        info: 点击登录按扭
+      - element_info: .header-menu-title
+        find_type: css
+        operate_type: perform
+        info: 鼠标悬停账户菜单
+      - element_info: //ul[@x-placement="bottom-end"]/li[2]
+        find_type: XPATH
+        operate_type: click
+        info: 选择退出
+check:
+      - element_into: p[class='el-message__content']
+        find_type: css
+        info: 检查输入帐号或者密码,登录异常提示
+      - element_into: div[class='el-form-item__error']
+        find_type: css
+        info: 检查输帐号为空时提示
+      - element_into: div[class='el-form-item__error']
+        find_type: css
+        info: 检查输密码为空时提示
+      - element_into: span[class="header-menu-title header-user-name"]
+        find_type: css
+        info: 成功登录
+      - element_into: button[type="button"]
+        find_type: css
+        info: 检查退出登录是否成功
+
+

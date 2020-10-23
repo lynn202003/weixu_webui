@@ -1,0 +1,103 @@
+-
+  id: test_createrole001.1
+  detail : 输入正确的内容正常创建角色
+  screenshot : creat_role_sucess
+  data :
+    rolename : 我是角色名称
+    roledesc : 我是角色说明
+    check_permissions : 选择权限
+  check :
+     - 我是角色名称
+     - 我是角色说明
+-
+  id: test_createrole001.2
+  detail : 角色名称为空时创建
+  screenshot : rolename_empty
+  data :
+    rolename : ""
+    roledesc : "123"
+    check_permissions : 选择权限
+  check :
+     - 请输入角色名称
+#-
+#  id: test_createrole001.3
+#  detail : 角色名称为一个有效字符:我
+#  screenshot : rolename_one
+#  data :
+#    rolename : "我"
+#    roledesc : "123"
+#    check_permissions : 选择权限
+#  check :
+#     - 我
+#     - '123'
+#
+#-
+#  id: test_createrole001.4
+#  detail : 角色名称为7个有效字符
+#  screenshot : rolename_seven
+#  data :
+#    rolename : "我有七个字吗哈"
+#    roledesc : "123"
+#    check_permissions : 选择权限
+#  check :
+#     - 我有七个字吗哈
+#     - '123'
+#
+#-
+#  id: test_createrole001.5
+#  detail : 角色名称为8个有效字符
+#  screenshot : rolename_eight
+#  data :
+#    rolename : "我有八个字吗哈哈"
+#    roledesc : "123"
+#    check_permissions : 选择权限
+#  check :
+#     - 我有八个字吗哈哈
+#     - '123'
+#
+#
+#-
+#  id: test_createrole001.6
+#  detail : 角色名称超过上限为9个有效字符
+#  screenshot : rolename_nine
+#  data :
+#    rolename : "我有9个字吗哈哈9"
+#    roledesc : "123"
+#    check_permissions : 选择权限
+#  check :
+#     - 我有9个字吗哈哈
+#     - '123'
+#
+#-
+#  id: test_createrole001.7
+#  detail : 角色说明为空时
+#  screenshot : roledesc_empty
+#  data :
+#    rolename : "我是角色名称"
+#    roledesc : ""
+#    check_permissions : 选择权限
+#  check :
+#     - 我是角色名称
+#     - ""
+#-
+#  id: test_createrole001.8
+#  detail : 角色说明为20个有效字符
+#  screenshot : roledesc_twenty
+#  data :
+#    rolename : "我是角色名称"
+#    roledesc : "我是角色说明，我要凑足二十个字呀，现在有"
+#    check_permissions : 选择权限
+#  check :
+#     - 我是角色名称
+#     - 我是角色说明，我要凑足二十个字呀，现在有
+#-
+#  id: test_createrole001.9
+#  detail : 角色说明为1个有效字符
+#  screenshot : roledesc_one
+#  data :
+#    rolename : "我是角色名称"
+#    roledesc : "我"
+#    check_permissions : 选择权限
+#  check :
+#     - 我是角色名称
+#     - 我

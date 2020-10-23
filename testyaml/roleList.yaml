@@ -1,0 +1,75 @@
+testinfo:
+      - id: test_rolelist001
+        title: 角色测试
+        info: 微续运营后台
+testcase:
+      - element_info: ul[role="menubar"]>li:nth-child(5) [slot="title"]
+        find_type: css
+        operate_type: click
+        info: 点击帐号管理
+      - element_info: ul[role="menubar"]>li:nth-child(5) [role="menuitem"]:nth-child(1)
+        find_type: css
+        operate_type: click
+        info: 点击角色列表
+      - element_info: //div[@class='main-body wx_scrollbar']/div[1]/form/div[3]/div
+        find_type: xpath
+        operate_type: click
+        info: 点击创建角色
+      - element_info: //form[@class='el-form']/div[1]//div[@class='el-input']/input
+        find_type: xpath
+        operate_type: send_keys
+        info: 输入角色名称
+      - element_info: //form[@class='el-form']/div[2]//div[@class='el-input']/input
+        find_type: xpath
+        operate_type: send_keys
+        info: 输入角色说明
+      - element_info: //div[@class="transfer-left"]/h3//span[@class="el-checkbox__inner"]
+        find_type: xpath
+        operate_type: click
+        info: 点击选择权限
+      - element_info: //div[@class='transfer-center']/p[1]/button
+        find_type: xpath
+        operate_type: click
+        info: 点击加入右侧
+      - element_info: //div[@class='transfer-center']/p[2]/button
+        find_type: xpath
+        operate_type: click
+        info: 点击加入左侧
+      - element_info: //form[@class="el-form"]/div[4]/div/button[2]
+        find_type: xpath
+        operate_type: click
+        info: 点击确定
+      - element_info: tbody>tr:nth-child(1) [class='wx_ops_box']>span:nth-child(2)
+        find_type: css
+        operate_type: click
+        info: 点击角色编辑
+      - element_info: tbody>tr:nth-child(1) [class='wx_ops_box']>span:nth-child(3)
+        find_type: css
+        operate_type: click
+        info: 点击角色删除
+      - element_info: //div[@class='el-message-box__btns']/button[2]
+        find_type: xpath
+        operate_type: click
+        info: 二次确认弹框点击删除
+      - element_info: [placeholder*="搜索" ]
+        find_type: css
+        operate_type: send_keys
+        info: 角色搜索
+      - element_info: //div[@class='main-body wx_scrollbar']/div[1]/form/div[2]/div
+        find_type: xpath
+        operate_type: click
+        info: 点击查询
+      - element_info: //form[@class="el-form"]/div[4]/div/button[1]
+        find_type: xpath
+        operate_type: click
+        info: 创建角色时点击取消按扭
+check:
+      - element_into: //tbody/tr[1]/td[2]
+        find_type: xpath
+        info: 角色列表中的角色名称
+      - element_into: //tbody/tr[1]/td[5]
+        find_type: xpath
+        info: 角色列表中的角色说明
+      - element_into: //form/div[1]//div[@class='el-form-item__error']
+        find_type: xpath
+        info: 检查角色名称为空
